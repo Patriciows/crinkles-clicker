@@ -5,20 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/src/style.css">
-  <title>Counter Game</title>
+  <title>Crinkles Clicker</title>
 </head>
 
 <body class="bg-[#232323] flex">
   <div class="h-screen flex flex-col justify-center items-center size-2/3">
-    <h1 id="counter" class="text-5xl text-white font-bold">0</h1>
+    <h1 id="counter" class="text-5xl text-white font-bold select-none" draggable="false">0</h1>
     <img src="/crinkles.png" alt="crinkles" id="crinkles" draggable="false"
       class="h-90 active:scale-98 hover:scale-101 duration-300 select-none">
     <button id="reset"
       class="bg-white rounded-lg p-1 text-sm text-[#3F2A21] font-bold hover:scale-102 duration-200">Reset
-      Score</button>
+      Game</button>
   </div>
-  <div class="h-screen flex flex-col justify-center items-center size-1/3 bg-[#121212]">
-    <h1 class="text-white">Upgrades</h1>
+  <div class="h-screen flex-col p-6 size-1/3 bg-[#121212]">
+    <h1 class="text-white text-3xl font-bold">Upgrades ↑</h1>
+    <button id="upgrade1"
+      class="bg-white rounded-lg p-1 text-sm text-[#3F2A21] hover:scale-102 font-bold duration-100 mt-5">
+      <pre>+1 Crinkles - <span id="price">10</span> Crinkles</pre>
+    </button>
   </div>
   <script type="module" src="/src/script.js"></script>
 </body>
