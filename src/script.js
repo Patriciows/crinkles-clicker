@@ -2,7 +2,7 @@ import "./style.css";
 
 let count = 0;
 let clickValue = 1;
-let basePrice = 10;
+let basePrice = 50;
 let currentPrice = basePrice;
 
 const crinklesImg = document.getElementById("crnikles");
@@ -23,12 +23,12 @@ resetBtn.addEventListener("click", () => {
 });
 
 function updateCounter() {
-  countDislpay.textContent = count;
+  countDislpay.textContent = Math.round(count);
 }
 
 upgrade1Btn.addEventListener("click", () => {
   if (count >= currentPrice) {
-    clickValue += 1.5;
+    clickValue += 0.5;
     count -= currentPrice;
     updatePrice();
     updateCounter();
@@ -38,6 +38,6 @@ upgrade1Btn.addEventListener("click", () => {
 });
 
 function updatePrice() {
-  currentPrice = basePrice += 1.5;
-  priceText.textContent = currentPrice;
+  currentPrice = basePrice *= 1.5;
+  priceText.textContent = Math.ceil(currentPrice);
 }
